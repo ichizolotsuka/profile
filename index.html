@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>曾信傑的個人網頁</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f0f0f0; }
+        header { background: #003366; color: white; padding: 20px; text-align: center; }
+        nav { display: flex; justify-content: center; background: #004080; }
+        nav a {
+            color: white; padding: 14px 20px; text-decoration: none;
+            display: block;
+        }
+        nav a:hover { background: #0066cc; }
+        section { display: none; padding: 20px; background: white; min-height: 300px; }
+        section.active { display: block; }
+        img.avatar { width: 150px; border-radius: 50%; margin: 20px auto; display: block; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>曾信傑</h1>
+        <p>Email: ichizolotsuka@gmail.com ｜ 生日: 1965/08/20</p>
+    </header>
+    <nav>
+        <a href="#" onclick="showTab('intro')">自我介紹</a>
+        <a href="#" onclick="showTab('hobby')">興趣</a>
+        <a href="#" onclick="showTab('work')">工作經驗</a>
+        <a href="#" onclick="showTab('portfolio')">作品集</a>
+    </nav>
+
+    <img src="profile.jpg" alt="大頭貼" class="avatar">
+
+    <section id="intro" class="active">
+        <h2>自我介紹</h2>
+        <p>嗨！我是曾信傑，累積34年職場經歷，專注於藥品銷售與管理，熱愛與人交流，追求專業與效率。</p>
+    </section>
+    
+    <section id="hobby">
+        <h2>興趣</h2>
+        <p>我喜歡登山健行、旅遊探索歷史古道，也熱愛攝影與寫作，紀錄生活點滴。</p>
+    </section>
+    
+    <section id="work">
+        <h2>工作經驗</h2>
+        <p>曾於日本大塚製藥任職28年，擔任營業主管，帶領12人團隊，擅長業務策略與客戶管理。</p>
+    </section>
+    
+    <section id="portfolio">
+        <h2>作品集</h2>
+        <p>包含行銷簡報、藥品推廣方案、顧客滿意度調查分析報告等，亦有健康管理相關內容。</p>
+    </section>
+
+    <script>
+        function showTab(id) {
+            const sections = document.querySelectorAll("section");
+            sections.forEach(sec => sec.classList.remove("active"));
+            document.getElementById(id).classList.add("active");
+        }
+    </script>
+</body>
+</html>
+
