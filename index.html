@@ -6,7 +6,7 @@
     <style>
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f0f0f0; }
         header { background: #003366; color: white; padding: 20px; text-align: center; }
-        nav { display: flex; justify-content: center; background: #004080; }
+        nav { display: flex; justify-content: center; background: #004080; flex-wrap: wrap; }
         nav a {
             color: white; padding: 14px 20px; text-decoration: none;
             display: block;
@@ -15,21 +15,24 @@
         section { display: none; padding: 20px; background: white; min-height: 300px; }
         section.active { display: block; }
         img.avatar { width: 150px; border-radius: 50%; margin: 20px auto; display: block; }
+        video { width: 100%; max-width: 600px; margin: 10px auto; display: block; }
+        h3 { margin-top: 40px; }
     </style>
 </head>
 <body>
     <header>
         <h1>曾信傑</h1>
-        <p>Email: ichizolotsuka@gmail.com </p>
+        <p>Email: ichizolotsuka@gmail.com ｜</p>
     </header>
     <nav>
         <a href="#" onclick="showTab('intro')">自我介紹</a>
         <a href="#" onclick="showTab('hobby')">興趣</a>
         <a href="#" onclick="showTab('work')">工作經驗</a>
         <a href="#" onclick="showTab('portfolio')">作品集</a>
+        <a href="#" onclick="showTab('videos')">動畫集</a>
     </nav>
 
-    <img src="profile.jpg" alt="大頭貼" class="avatar">
+    <img src="profile.png.jpg" alt="大頭貼" class="avatar">
 
     <section id="intro" class="active">
         <h2>自我介紹</h2>
@@ -51,6 +54,21 @@
         <p>包含行銷簡報、藥品推廣方案、顧客滿意度調查分析報告等，亦有健康管理相關內容。</p>
     </section>
 
+    <section id="videos">
+        <h2>動畫集</h2>
+        <h3>1. 自我介紹動畫</h3>
+        <video src="introduce.mp4" controls></video>
+
+        <h3>2. 我的形象動畫</h3>
+        <video src="me.png.mp4" controls></video>
+
+        <h3>3. 專業模式動畫</h3>
+        <video src="Professional_Mode_A_high_impact_animation_of_a_bri.mp4" controls></video>
+
+        <h3>4. 太空船動畫</h3>
+        <video src="spacecraft.mp4" controls></video>
+    </section>
+
     <script>
         function showTab(id) {
             const sections = document.querySelectorAll("section");
@@ -60,4 +78,3 @@
     </script>
 </body>
 </html>
-
